@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pertussis Outbreak Predictions</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon2.png">
+
+  <style>
+    body {
+      background-color: #dbdbdb;
+    }
+  </style>
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Pertussis Outbreak Predictions</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#pertussis">Pertussis</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#vaccines">Vaccines</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#counties">Counties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#data">Data & ETL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#findings">Findings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#analysis">Analysis</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#suggestions">Suggestions</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <header class="bg-primary text-white">
+    <div class="container text-center">
+<!-- <header>
+    <div class="container">
+      <h1>Pertussis Outbreak Predictions</h1>
+      <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+    </div>
+  </header> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <a href="https://dphhs.mt.gov/publichealth/cdepi/diseases/pertussis">
+          <img class="img-fluid" src="images/pertussis_risk.png" alt="Pertussis Risk" style="padding:50px">
+        </a>
+        <!-- <div class="img align-items-center" style="background-image:url(images/pertussis_risk.png);"></div> -->
+      </div>
+    </div>
+  </div>
+  <section id="pertussis">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>About Pertussis</h2>
+        <br>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S3oZrMGDMMw" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <p>Pertussis, historically known as whooping cough, is a very serious respiratory infection caused by the
+          pertussis bacteria. It can cause violent coughing fits. Whooping cough is most harmful for young babies and
+          can be deadly.
+          <br> <br>
+          Information on whooping cough:
+
+          <ul>
+            <li>Mayo Clinic: <a
+                href="https://www.mayoclinic.org/diseases-conditions/whooping-cough/symptoms-causes/syc-20378973">Information
+                on Whooping Cough</a>.
+              <br><br> "Whooping cough is caused by a type of bacteria called Bordetella Pertussis. When an infected
+              person coughs or sneezes, tiny germ-laden droplets are sprayed into the air and breathed into the lungs of
+              anyone who happens to be nearby."
+            </li>
+            <br>
+            <li>Centers for Disease Control & Prevention: <a href="https://www.cdc.gov/pertussis/index.html">Pertussis
+                (Whooping Cough)</a>
+              <br><br> "Pertussis is known for uncontrollable, violent coughing which often makes it hard to breathe.
+              After cough fits, someone with pertussis often needs to take deep breaths, which result in a “whooping”
+              sound. Pertussis can affect people of all ages, but can be very serious, even deadly, for babies less than
+              a year old."</li>
+            <br>
+
+
+          </ul>
+        </p>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <a
+          href="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjv2Mrd76jjAhVOSK0KHaJdB9cQjRx6BAgBEAU&url=https%3A%2F%2Fdraxe.com%2Fwhooping-cough-symptoms%2F&psig=AOvVaw2KLBuiFyEUurZ4C7M4k-7m&ust=1562797283693609">
+          <img class="img-fluid" src="images/symptoms.png" alt="Pertussis Symptoms">
+        </a>
+        <br><br>
+        <h4 text-align="centered">
+          <p>"The best way to protect against pertussis is by <a
+              href="https://www.cdc.gov/pertussis/vaccines.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Ffeatures%2Fpertussis%2Findex.html">
+              getting vaccinated."</a></p>
+        </h4>
+        <p>-Centers for Disease Control</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="vaccines" class="bg-light">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>About Vaccines</h2> -->
+  <!-- <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S3oZrMGDMMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
+  <!-- Insert image -->
+  <!-- <p class="lead">Insert list of research about pertussis and why we don't want it coming back.</p> -->
+  <!-- <img class="img-fluid" src="images/vaccination.png" alt="Vaccination">
+        <br>
+        <img class="img-fluid" src="images/herd_immunity.png" alt="Herd Immunity">
+        <a
+          href="https://www.cdc.gov/pertussis/vaccines.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Ffeatures%2Fpertussis%2Findex.html">
+          <br><br>
+          <img class="img-fluid" src="images/pertussis_vax.jpg" alt="Who Should Get Vaccinated?" class="center"></a>
+        <br><br><br>
+        <h3>So What's the Problem?</h3> -->
+  <!-- <br><br>
+        <img class="img-fluid" src="images/CDC.png" alt="Center for Disease Control"> -->
+  <!-- <br>
+        <img class="img-fluid" src="images/anti_vaccination.png" alt="Anti-Vaccination">
+        <br><br>
+        <ul>
+          <li>LA Times: <a href="https://www.latimes.com/health/la-me-kindergarten-vaccination-20170813-htmlstory.html">
+              Despite California's strict new law, hundreds of schools still don't have enough vaccinated kids</a>
+            <br><br>
+            "At nearly 750 schools, 90% or fewer kindergartners had been fully vaccinated last year, the analysis found.
+            Experts say the rate should be at least 95% to prevent the spread of highly contagious diseases such as
+            measles.
+            <br><br>
+            "California’s tougher inoculation law, known as SB 277, was approved in 2015 after a measles outbreak that
+            originated at Disneyland.
+            The law bars parents from citing religious or personal beliefs to excuse their children from immunizations,
+            but some who already had such exemptions were allowed to keep them.""
+          </li> <br>
+          <li>AAFP: <a href="https://www.aafp.org/news/health-of-the-public/20141231califpertussis.html">Confluence of
+              Factors Contribute to California's Worsening Pertussis Outbreak</a>
+            <br><br>
+            "Despite extensive immunization, the disease pertussis remains one of the world’s leading causes of
+            vaccine-preventable deaths."
+          </li> <br>
+        </ul>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="counties" class="bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>California County Pertussis Outbreak Information</h2><br>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//plot.ly/~chelmo/46.embed" allowfullscreen></iframe>
+          </div><br>
+          <!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~chelmo/46.embed"></iframe> -->
+          <!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~chelmo/46.embed"></iframe> -->
+          <strong>Figure 1</strong> - Plotly box charts showing county pertussis cases per 10,000 residents per year
+          <br><br>
+          <p>Pertussis outbreaks occur every 3-5 years, as can clearly be seen above. There is a huge spike
+            in cases in both 2010 and 2014, with the hardest-hit counties seeing upwards of 14 cases per 10,000
+            residents in each of those years.
+          </p><br>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//plot.ly/~chelmo/42.embed" allowfullscreen></iframe>
+          </div><br>
+          <strong>Figure 2</strong> - Plotly box charts showing county kindergarten vaccination rates
+          <br><br>
+          <p>Kindergarten vaccination rates by county vary immensely, as can be seen on the above box chart.
+            Some counties' kindergarten vaccination rates are nearly 100%, while others fall below 80%.</p><br>
+          <img class="img-fluid" src="images/county_rate.png" alt="Anti-Vaccination">
+          <br>
+          <br>
+          <strong>Figure 3</strong> - Tableau graph showing kindergarten immunization rates by county for counties with
+          a population over 1 million
+          <br><br>
+          <p>Immunization Rate by county for the nine most populated counties with color gradient centered at the 94%
+            herd immunity rate for Pertussis, with at risk counties showing in red.
+            Before diving into our machine learning model we did notice and inverse relationship between vaccination
+            rate and reported Pertussis cases.</p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+              src="https://public.tableau.com/shared/W255GXYZW?:showVizHome=no&:embed=true&:display_count=no&:origin=viz_share_link"></iframe>
+          </div><br>
+          <strong>Figure 4</strong> - Tableau map showing a variety of reported preventable disease cases over time
+          <br><br>
+          <p>Map displaying the most common preventable diseases in California years 2001 to 2017. The size of the
+            circles indicate the count of each type of infection.
+            We observe a minor Pertussis outbreak in 2005, followed by major outbreaks in 2010 and 2014.
+            Also, in 2011, Hepatitis A surpasses Invasive Meningococcal Disease (Meningitis) as the second most common
+            preventable disease.</p>
+          <!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~chelmo/42.embed"></iframe> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="data">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Data Collection & ETL</h2>
+          <br>
+          <div class="img">
+            <a href="https://data.chhs.ca.gov/dataset/vaccine-preventable-disease-cases-by-county-and-year">
+              <img src="images/chhs.png" class="img-fluid" alt="CHHS Open Data Portal" class="center">
+            </a>
+          </div>
+          <br>
+          <p>
+            The California Health & Human Services (CHHS) Open Data Portal provided California pertussis incidents by
+            county over time.
+          </p>
+          <br>
+          <div class="img">
+            <a href="https://www.shotsforschool.org/k-12/reporting-data/">
+              <img src="images/logo_shotsforschool.png" class="img-fluid" alt="CHHS Open Data Portal" class="center">
+            </a>
+          </div>
+          <br>
+          <p>
+            The Shots for Schools website was a huge help to this process as they took raw CHHS data and created csv
+            files that included
+            data on kindergarten vaccination rates by school, sorted by county. County data, then, became easy to
+            extract and to merge with the other data sources.
+          </p>
+          <br>
+          <div class="img">
+            <a href="https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml">
+              <img src="images/census.png" class="img-fluid" alt="US Census Factfinder Website" class="center">
+            </a>
+          </div>
+          <br>
+          <p>
+            Initially, only county population data over time was extracted from the US Census Bureau API. With the
+            second iteration, however, an
+            additional 75 columns of data was pulled for each California county for every year between 2010 and 2016.
+            These were processed down to the following items:
+            <ul>
+              <li><strong>County name</strong></li>
+              <li><strong>Total county population</strong></li>
+              <li><strong>Percent of population that was foreign born</strong> - Is it possible that people originally
+                from foreign countries travel back to those countries more often
+                and are thus more likely to spread pertussis?</li>
+              <li><strong>Percent of population that moved from overseas in the past year</strong> - Do people moving
+                from overseas (either returning or immigrating to the US) have a tendency to bring
+                pertussis with them?</li>
+              <li><strong>Percent of women ages 15-50 who had given birth in the previous year</strong> - This measure
+                was considered because it is common for obstetricians to
+                encourage pregnant women to get immunized against pertussis in their third trimester, some of whom <a
+                  href="https://www.cdc.gov/pertussis/pregnant/mom/protection.html">encourage their families and friends
+                  to get immunized</a> as well (cocooning).</li>
+              <li><strong>Percent of population that was school aged</strong> (3- to 17-years-old) - It was worth
+                considering if a large school-aged population made it more likely for a
+                county to experience an outbreak because so many children were in close proximity to one another, or if
+                it was less likely because children are required to be immunized to attend school.</li>
+              <li><strong>Average household size</strong> - Does higher household size lead to an increased spread of
+                disease, and hence a higher likelihood of an outbreak?</li>
+              <li><strong>Percent of school-aged population not enrolled in public or private school</strong> - This
+                measure is being used as a proxy for students ages 3-17 who are homeschooled.
+              </li>
+              <li><a href="https://www.census.gov/topics/income-poverty/poverty/guidance/poverty-measures.html"><strong>Percent
+                    of the school-aged population that was below the poverty line</strong></a> - Does poverty
+                play a role in the spread of pertussis, in particular at schools? It is possible that social programs
+                make it more likely for low-income students to have access to immunizations. It's also possible that
+                <a href="http://money.com/money/5641663/anti-vaccine-rich-people/"> wealthy families are more likely to
+                  resist immunization or to have the ability to opt out from vaccinations</a>, whether legal/ethical or
+                not.</li>
+            </ul>
+            <img src="images/df.png" alt="2010 DataFrame" class="center">
+            <br><br>
+            <a href="https://github.com/clmonahan/clmonahan.github.io/blob/master/pertussis/images/census_list.png">Click
+              here to view the full list of census variables used for analysis</a>
+            <br><br>
+            Snippet of ETL process for US Census API data:
+            <br><br>
+            <img src="images/census_etl.png" alt="US Census ETL">
+            <br><br>
+            <a href="https://github.com/timothybarry/ML-Capstone-Project-Repo/blob/master/census_data.ipynb">Click to
+              view full code for US Census ETL</a>
+          </p>
+          <p>
+            Once the US Census data had been cleaned up and saved as a csv, it was combined with the California
+            Kindergarten Vaccination Rate and pertussis incidents data from the
+            CHHS Open Data Portal. The files all had county name as common columns, but needed to be cleaned up to match
+            exact wording and case.
+          </p>
+          <br>
+          <img class="img-fluid" src="images/CodeSnippit.JPG" alt="Jupyter Notebook">
+          <br><br>
+          <p>
+            <strong>Additional data cleaning that was performed to allow all data to be joined</strong>:
+            <br><br>
+            Vaccination Data
+            <ul>
+              <li>Selected enrollment by school and number of students vaccinated for pertussis</li>
+              <li>Cleaned out rows where either enrollment or vaccination numbers were missing</li>
+              <li>Converted both enrollment and vaccination columns to numeric </li>
+              <li>Calculated sums for enrollment and vaccination on group by on county</li>
+              <li>Calculated new column of county-wide vaccination rate</li>
+              <li>Created a multi-level index of (year, county)</li>
+            </ul>
+
+            Population Data
+            <ul>
+              <li>Converted data from wide format to long format</li>
+              <li>Used first row as column names</li>
+              <li>Converted population column to numeric</li>
+              <li>Created multi-level index of (year, county)</li>
+            </ul>
+
+            Disease Incidence
+            <ul>
+              <li>Downloaded json file and converted to dataframe</li>
+              <li>Selected numbers of pertussis incidence by county</li>
+              <li>Created multi-level index of (year, county)</li>
+              <li>Merged with vaccination/population dataframe</li>
+              <li>Calculated incidence rate per 10,000 residents</li>
+            </ul>
+          </p>
+          <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="findings" class="bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Findings</h2>
+
+          <img class="img-fluid" src="images/correlation_matrix.png" alt="Correlation Matrix">
+
+          <p>
+            <strong>Figure 5</strong> - Correlation matrix of the 9 features considered for analysis
+            <br><br>
+            <a href="https://github.com/timothybarry/ML-Capstone-Project-Repo/blob/master/Immunology%20Study.ipynb">View
+              the full machine learning jupyter notebook here</a>
+            <br><br>
+            The correlation matrix was used to select which features to use for regression analysis. We selected the top 5 features based on their 
+            correlation to the outbreak percentage. A linear regression was run on each of these features to glean additional information.
+            <br><br>
+             <strong> Click on the features
+            listed below to learn more.</strong>
+              <br>
+          </p>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#vax">Kintergarten Vaccination Rate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#time">Years Since Last Pertussis Outbreak</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#born">Percent of Population Born Outside the U.S.</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#move">Percent of Population that Moved from Overseas in the Past Year</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#poverty">Percent of the Kindergarten Population Below the Poverty Line</a>
+            </li>
+          </ul>
+
+
+
+          <section id="vax">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2>Kindergarten Vaccination Rate</h2>
+                <br>
+
+                <img class="img-fluid" src="images/linear.png" alt="Linear Regression">
+                <p>
+                  <strong>Figure 6</strong> - Linear Regression plot of training data vs predicted
+                  <br><br>
+                  Predicted line has a shallow slope that shows a decreasing pertussis outbreak rate as the vaccination
+                  rate
+                  increases.
+                  Looking at the distribution of the training data plotted we can infer that the correlation between
+                  vaccination
+                  rate and pertussis cases is not very strong.
+                </p>
+                <br>
+                <img class="img-fluid" src="images/accuracy.png" alt="Logistical Regression">
+                <p>
+                  <strong>Figure 7</strong> - Plot of incident threshold vs model accuracy
+                  <br><br>
+                  The plot shows that the higher the threshold set is to determine the greater the accuracy of the
+                  model. Based
+                  on the plot, we selected 10 as the threshold to run our logistic regression on.
+                </p>
+                <br>
+                <img class="img-fluid" src="images/logistical.png" alt="Logistical Regression">
+                <p>
+                  <strong>Figure 8</strong> - Logistic Regression plot of test data vs probability
+                  <br><br>
+                  Because the scatter plot of the linear regression seems to show a clusters of low incident and high
+                  incident,
+                  we decided to also do a logistic regression to predict outbreak vs. no outbreak.
+                  The plot of the regression data shows a higher probability of no outbreak as the vaccination rate
+                  increases,
+                  which is what we expected.
+                </p>
+
+              </div>
+            </div>
+
+          </section>
+
+          <section id="time">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <h2>Years Since Last Outbreak</h2>
+                  <br>
+                  <img class="img-fluid" src="images/years_since_outbreak_log.png" alt="Foreign Born">
+                  <p>
+                    <strong>Figure 9</strong> - Logistic regression plot of number of years since last outbreak to
+                    outbreak probability
+                    <br><br>
+                    Looking at the Tableau visualization (Figures 3 & 4 above) we could visually see that there is a cyclical nature to the outbreaks. We opted to 
+                    further explore this pattern and found a correlation between the time in years since the last outbreak and future outbreaks. 
+                  </p>
+                </div>
+              </div>
+            </section>
+
+          <section id="born">
+            <!-- <div class="container-fluid"> -->
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2>Percent of Population that is Foreign Born</h2>
+                <br>
+                <img class="img-fluid" src="images/foreign_linear.png" alt="Foreign Born">
+                <p>
+                  <strong>Figure 10</strong> - Linear regression plot of population that is foreign born versus probability of accuracy
+                  <br><br>
+                  When we visualized the linear regression for foreign born population in each county against accuracy, we found minimal influence on the 
+                  accuracy of the model, as can be seen by the near-zero slope of the regression line.
+                </p>
+                <br><br>
+                <img class="img-fluid" src="images/foreign_born_log.png" alt="Foreign Born">
+                <p>
+                  <strong>Figure 11</strong> - Logistic regression plot of percent of population that is foreign born to
+                  outbreak probability
+                  <br><br>
+                  The probability does not vary widely over the entire range of the population percentages, which demonstrates the weak correlation in Figure 10.
+                </p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </section>
+
+          <section id="move">
+            <!-- <div class="container-fluid"> -->
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2>Percent of Population that Moved from Overseas in the Last Year</h2>
+                <br>
+                <img class="img-fluid" src="images/overseas_move_linear.png" alt="Foreign Born">
+                <p>
+                  <strong>Figure 12</strong> - Linear regression plot of population that moved from overseas in the past
+                  year versus probability of accuracy
+                  <br><br>
+                  There appears to be a slight correlation here.
+                </p>
+                <img class="img-fluid" src="images/overseas_move_log.png" alt="Foreign Born">
+                <p>
+                  <strong>Figure 13</strong> - Logistic regression plot of percent of population that moved from
+                  overseas in the past year to outbreak probability
+                  <br><br>
+                  We can see in the above graph that the percentage of the population in all counties that moved from overseas is less than 2%, which is likely why this 
+                  feature has a weak correlation.
+                </p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </section>
+
+          <section id="poverty">
+            <!-- <div class="container-fluid"> -->
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2>Percent of School-Aged Population Whose Family is Below the Poverty Line</h2>
+                <br>
+                <img class="img-fluid" src="images/poverty_linear.png" alt="Kindergarten Poverty Linear">
+                <p>
+                  <strong>Figure 14</strong> - Linear regression plot of percent of Kindergarten population whose family income is below the poverty line versus probability of accuracy
+                  <br><br>
+                  This feature is one of the stronger indicators that we found in our analysis, as can be seen in the chart above. The fact that it is a negative correlation is interesting, 
+                  and provides some evidence of our speculations potentially being correct.
+                  <br><br>
+                </p>
+                <img class="img-fluid" src="images/below_poverty_log.png" alt="Kindergarten Poverty Logistic">
+                <p>
+                  <strong>Figure 15</strong> - Logistic regression plot of percent of Kindergarten population whose family income is below the poverty line to outbreak probability
+                  <br><br>
+                  The wider range of probabilities over the percentage of kids from low-poverty households strengthens the correlation.
+                </p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </section>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="analysis">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Analysis of Project</h2><br>
+          <!-- <div class="embed-responsive embed-responsive-16by9"> -->
+          <img class="img-fluid" src="images/analysis_project.png" alt="Analysis">
+          <br><br>
+          <!-- <iframe class="embed-responsive-item" src="images/analysis_project.png" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <!-- </div> -->
+          <p>Factors that prevented a stronger model for predicting Pertussis outbreaks:
+            <ul>
+              <li>We used kindergarten vaccination rates as representing the overall vaccination rate for each county’s
+                population. This does not account for those who relocated to counties after kindergarten age.</li>
+              <li>Immunity from either vaccination or having Pertussis is not life-long. This also weakens the use of
+                kindergarten vaccination rate as representative of the general population.</li>
+              <li>Year to year changes in kindergarten vaccination rates only relates to a small portion of the
+                population and does not reflect the same amount of change in the general population vaccination rate.
+              </li>
+              <li>Access to additional datasets limited the model. Additional potential factors could include:
+                <ul>
+                  <li>Population density of county or biggest city in county.</li>
+                  <li>Proximity to international airport and number of flights to countries affected by pertussis.</li>
+                  <li>Number of adults who work outside the home versus from the home.</li>
+                  <li>Vaccination rates for general population.</li>
+                </ul>
+              </li>
+            </ul>
+            As we added more features to our logistic regression, our data set lost a span of data point by a significant amount. 
+            We went from a 16 year span in our initial single feature linear regression to six years in our final model due to the limitation of data availability. 
+            While we did find other features with a notable correlation that would strengthen our ability to predict an outbreak, we lost nearly two thirds of our yearly data, weakening our model. 
+            Thus, an inherent problem in data science - the limitation of data.
+            <br><br>
+            <strong>Zika virus machine learning model as inspiration for future model</strong>
+            <br><br>
+            <img class="img-fluid" src="images/zika.png" alt="Zika Model">
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="suggestions">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Suggestions to Increase Vaccination Rates</h2><br> -->
+  <!-- <div class="embed-responsive embed-responsive-16by9"> -->
+  <!-- <img class="img-fluid" src="images/next.png" alt="Next Steps"><br><br> -->
+  <!-- </div> -->
+
+  <!-- <ul>
+                <li>Provide more comprehensive education to parents about the benefits of vaccination</li>
+                <li>Allow only medical exemptions for non-vaccination in schools</li>
+                <li>Create a state/national registry of medical exemptions with issuing physician</li>
+                <li>Establish legislation that disciplines physicians for issuing exemptions for payment</li>
+                <li>Establish legislation at the state level that requires schools to track and report vaccination information – with possible financial incentives or penalties</li>
+              </ul>
+              <br>
+                <strong>Further Reading:</strong> 
+                  <ul>
+                    <li>LA Times: <a href="https://www.latimes.com/politics/la-pol-sac-skelton-california-measles-vaccines-20190509-story.html">Bill to stiffen California’s vaccine law must first get past single-issue voters</a></li>
+                    <li>Redding Record Searchlight: <a href="https://www.redding.com/story/news/local/2019/05/13/ca-schools-not-reporting-vaccination-rates-face-no-consequences/3576981002/">California schools have to submit vaccine rates, but face no consequences if they don't</a></li>
+                  </ul>
+                  </p>
+              <strong>A parting thought…</strong> 
+              <br><br>
+                When parents chose to not vaccinate their child, they place at greater risk persons who cannot be vaccinated for medical reasons, those who are too young to be fully vaccinated, and others for whom vaccines do not provide complete protection.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">© 2019 <a href="chelseamonahan.com">Chelsea Monahan</a>, <a href="https://www.linkedin.com/in/timothy-barry-a4432510/">Tim Barry</a>, & <a href="https://www.linkedin.com/in/stevebogdan/">Steve Bogdan</a> </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
